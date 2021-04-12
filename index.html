@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.textarea{
+			height: 50px;
+			width: 600px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Куда бы ты хотел поехать на выходных?</h1>
+	<textarea class="textarea"></textarea>
+	<button class="btn">Let's go</button>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119755.48406581892!2d129.7017859!3d62.0313335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1618211952449!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="iframe"></iframe>
+	
+	<script type="text/javascript">
+		let btn = document.querySelector(".btn");
+		let input = document.querySelector(".textarea");
+		let iframe = document.querySelector(".iframe");
+		btn.onclick = function(){
+			let num = input.value;
+			iframe.src = num;
+		}
+	</script>
+</body>
+</html>
